@@ -25,7 +25,7 @@ SECRET_KEY = '*4ywcftua2bi&dbxrf)1y)z4f)+70vvcm36y&55$ber%lkdumi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django.book', 'das', 'localhost']
+ALLOWED_HOSTS = ['django.book', 'das', 'localhost', 'pythontest.ru']
 
 SITE_ID = 1
 
@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blog',
-        'USER': os.environ['PGSQL'],
-        'PASSWORD': os.environ['PGSQL'],
-        'HOST': '192.168.5.21'
+        'NAME': 'superblog',
+        'USER': 'blogsuperuser',
+        'PASSWORD': 'quoo8Eet',
+        'HOST': '185.104.114.119'
     }
 }
 
