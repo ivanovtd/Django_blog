@@ -1,0 +1,2 @@
+http://das:5050/browser/#   #PGADMIN
+http://das:8080/blog/       #django website

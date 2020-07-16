@@ -1,0 +1,39 @@
+version: '3.5'
+ 
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres:12.1
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-Welcome01}
+      PGDATA: /home/ivanovtd/code/postgres
+    volumes:
+       - postgres:/home/ivanovtd/code/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: always
+   
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4:4.22
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-work@ivanovtd.ru}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+    volumes:
+       - pgadmin:/home/ivanovtd/code/pgadmin
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - postgres
+    restart: always
+ 
+networks:
+  postgres:
+    driver: bridge
+ 
+volumes:
+    postgres:
+    pgadmin:
