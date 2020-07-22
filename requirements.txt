@@ -6,4 +6,4 @@ Markdown==3.2.2
 psycopg2-binary==2.8.5
 pytz==2020.1
 sqlparse==0.3.1
-python-mysql
+mysqlclient
