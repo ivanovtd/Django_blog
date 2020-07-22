@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'superblog',
-        'USER': 'blogsuperuser',
-        'PASSWORD': 'quoo8Eet',
-        'HOST': '185.104.114.119'
+        'NAME': 'b222914_testmysqldjango',
+        'USER': 'u222914_django',
+        'PASSWORD': 'djangotest',
+        'HOST': 'web15.majordomo.ru'
     }
 }
 
