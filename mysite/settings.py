@@ -128,5 +128,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-#Test emails without SMTP Server
+
+#EMails
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
